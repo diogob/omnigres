@@ -47,6 +47,17 @@ begin
                </div>
              </div>
 
+             <div class="tile is-ancestor">
+               <div class="tile">
+                 <div class="tile is-parent is-vertical">
+                   <article class="tile is-child notification is-grey-lighter">
+                     <p class="title">Listeners</p>
+                     <p>$html$ || (select json_agg(row_to_json(cl))::text from omni_httpd.cluster_listeners() cl) || $html$ </p>
+                   </article>
+                 </div>
+               </div>
+             </div>
+
              <p class="is-size-7">
                Running on <strong> $html$ || version() || $html$ </strong>
              </p>
